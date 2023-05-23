@@ -84,12 +84,16 @@ getNewQuestions = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(acceptingAnswers) return;
+        if(acceptingAnswers) return true;
 
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
+        console.log(selectedAnswer);
+        console.log(selectedChoice);
+
+        
         getNewQuestions();
 
     });
