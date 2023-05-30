@@ -4,11 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores Page</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="highscores.js" defer></script>
+    <link rel="stylesheet" href="highscores.css">
 </head>
 <body>
-    <h2>High Scores Page!</h2>
-    <ol class="high-scores-list"></ol>
+    <div class="container"></div>
+        <div id="home" class="flex-center flex-column">
+     <h2>High Scores Page!</h2>
+    <h3>Save Your Scores!</h3>
+    <form action="highscores.js"></form>
+    <label id="username" for="Username">UserName</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input id="submit" type="submit" value="Submit">
+    <ol id="high-scores-list">
+        <li></li>
+    </ol>
+      </div>
+    <script src="/highscores.js" defer></script>
 </body>
 </html>

@@ -1,16 +1,26 @@
-const highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
 
-const orderedlistEl = document.querySelector('.high-scores-list')
+function showScore() {
+    let highscore = JSON.stringify(highscores);
 
-for( let i = 0; i < highScores.length; i++) {
+    window.localStorage.setItem("highscores", highscoresString); 
+
+    const highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+    const orderedlistEl = document.querySelector('#high-scores-list')
+
+    for( let i = 0; i < highscores.length; i++) {
  
     let listItem = document.createElement("li");
  
- listItem.textContent = `${highScores[i].name} - ${highScores[i].score}`;
+ listItem.textContent = `${highscores[i].name} - ${highscores[i].score}`;
 
  orderedlistEl.appendChild(listItem);
  
- 
+ console.log(highscores)
  
 
 };
+};
+
+showScore();
+
